@@ -1,42 +1,132 @@
-# SVM Kernels and Their Effect on Decision Boundaries
+# 📊 SVM Kernels Tutorial – Understanding Decision Boundaries
 
-This repository contains an educational tutorial on **Support Vector Machines (SVM)**. The focus is on demonstrating how different kernel functions (Linear, Polynomial, and RBF) transform data and influence the shape of decision boundaries.
+## 📌 Overview
+This project explores **Support Vector Machines (SVMs)** and demonstrates how different kernel functions affect decision boundaries.
 
-## 🚀 Tutorial Overview
-This tutorial is designed to teach users the mathematical intuition and practical implementation of SVM kernels using the Iris dataset.
+Using the **Iris dataset**, we visualize how:
+- Linear kernels create straight decision boundaries  
+- Polynomial kernels introduce curvature  
+- RBF kernels model complex, non-linear relationships  
 
-### Key Technical Concepts Covered:
-- **The Kernel Trick:** Understanding how data is mapped to higher-dimensional spaces.
-- **Mercer's Theorem:** The mathematical requirements for a function to be a valid kernel.
-- **Lagrangian Dual Problem:** How SVM optimization is solved in practice.
-- **Hyperparameter Tuning:** Exploring the effects of `degree` (Polynomial) and `gamma` (RBF).
+The goal is to build intuition around the **kernel trick** and how SVMs handle non-linear data.
 
-## 📊 Visualizations
-The tutorial includes high-quality, color-blind friendly visualizations:
-- **2D Decision Boundaries:** Comparing Linear, Polynomial, and RBF separations.
-- **3D Surface Plots:** Visualizing the RBF decision function's "elevation" in feature space.
+---
 
-## ♿ Accessibility Features
-This project was built with accessibility in mind to ensure all learners can benefit:
-- **Color-Blind Friendly:** Uses the `Viridis` colormap, which is perceptually uniform.
-- **Alternative Text:** Detailed Markdown descriptions are provided below every figure for screen-reader users.
-- **Structural Clarity:** Uses hierarchical headers and LaTeX for mathematical notation.
+## 🧠 Objectives
+- Understand how SVM works for classification  
+- Compare different kernel functions:
+  - Linear
+  - Polynomial
+  - RBF (Gaussian)  
+- Visualize decision boundaries in 2D  
+- Explore how kernel choice impacts model performance  
 
-## 🛠️ How to Run the Code
-To reproduce the plots and analysis locally:
+---
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/sandeep1214/SVM_Kernels_Tutorial.git](https://github.com/sandeep1214/SVM_Kernels_Tutorial.git)
-2. **Install Dependencies:**
-   Ensure you have Python installed, then run:
-   ```bash
-   pip install numpy matplotlib scikit-learn
-3. **Open the Notebook:**
-   Launch Jupyter Notebook or JupyterLab and open
-   `24174419_SVM_Kernels_Tutorial_.ipynb`
+## 📂 Dataset
+We use the **Iris dataset** with the following setup:
+- Features:  
+  - Petal Length  
+  - Petal Width  
+- Classes:
+  - Setosa  
+  - Versicolor  
+- Total samples used: **100 (binary classification)**  
 
-## 📚 References
-- Boser, B., Guyon, I., & Vapnik, V. (1992). A training algorithm for optimal margin classifiers.
-- Cortes, C., & Vapnik, V. (1995). Support-vector networks. Machine Learning.
-- Scikit-learn Documentation: [SVM Module](https://scikit-learn.org/stable/modules/svm.html)
+---
+
+## ⚙️ Technologies Used
+- Python  
+- NumPy  
+- Matplotlib  
+- Scikit-learn  
+
+---
+
+## 🚀 Project Workflow
+
+### 1. Data Preparation
+- Load dataset from `sklearn.datasets`
+- Filter to 2 classes for visualization
+- Split into train/test sets
+- Standardize features using `StandardScaler`
+
+---
+
+### 2. Models Implemented
+
+#### 🔹 Linear Kernel
+- Creates a **straight-line decision boundary**
+- Works best for **linearly separable data**
+```python
+SVC(kernel='linear', C=1.0)
+```
+#### 🔹Polynomial Kernel
+- Produces curved decision boundaries
+- Controlled by degree parameter  
+```python
+SVC(kernel='poly', degree=3, C=1.0)
+```
+#### 🔹 RBF (Gaussian) Kernel
+- Maps data into higher-dimensional space
+- Handles complex non-linear patterns
+```python
+SVC(kernel='rbf', C=1.0, gamma=0.5)
+```
+## 📈 Visualizations
+
+### ✅ Decision Boundaries
+Each kernel is visualized using a 2D plot showing:
+- Data points
+- Classification regions
+- Decision boundary
+  
+### ✅ 3D Visualization (RBF)
+- Displays the decision function surface
+- Helps understand how non-linear separation works in higher dimensions
+- 
+## 🧪 Key Concepts
+
+### 🔹 Kernel Trick
+Instead of explicitly transforming data, SVM computes inner products in higher-dimensional space using kernel functions.
+
+### 🔹 Why Kernels Matter
+- Linear kernel → simple, interpretable
+- Polynomial kernel → moderate complexity
+- RBF kernel → highly flexible
+
+Choosing the wrong kernel can lead to:
+- Underfitting
+- Overfitting
+- 
+## 📊 Results Summary
+| Kernel     | Behavior                        | Use Case                    |
+| ---------- | ------------------------------- | --------------------------- |
+| Linear     | Straight boundary               | Linearly separable data     |
+| Polynomial | Smooth curved boundary          | Moderate non-linearity      |
+| RBF        | Highly flexible, complex shapes | Complex/non-linear patterns |
+
+## 💡 Intuition
+
+A key insight:
+- Non-linear boundaries in 2D often become linear in higher dimensions.
+- The RBF kernel effectively transforms the data so that a linear separator can exist in that higher-dimensional space.
+
+## 🧾 Conclusion
+- Kernel selection is critical in SVM performance
+- Linear is simple and fast
+- Polynomial adds controlled complexity
+- RBF is powerful but sensitive to parameters
+
+### 👉 Always experiment with:
+- C (regularization)
+- degree (polynomial)
+- gamma (RBF)
+  
+## 📎 References
+Boser, Guyon, Vapnik (1992) – Optimal margin classifiers
+Cortes & Vapnik (1995) – Support Vector Networks
+Scikit-learn Documentation
+
+## 🔗 Repository
+https://github.com/sandeep1214/SVM_Kernels_Tutorial
