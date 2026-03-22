@@ -34,12 +34,12 @@ To reproduce the plots and analysis locally:
    pip install numpy matplotlib scikit-learn
 3. **Open the Notebook:**
    Launch Jupyter Notebook or JupyterLab and open
-   24174419_SVM_Kernels_Tutorial_.ipynb
+   `24174419_SVM_Kernels_Tutorial_.ipynb`
 
 ## 📚 References
 - Boser, B., Guyon, I., & Vapnik, V. (1992). A training algorithm for optimal margin classifiers.
 - Cortes, C., & Vapnik, V. (1995). Support-vector networks. Machine Learning.
-- Scikit-learn Documentation: SVM Module
+- Scikit-learn Documentation: [SVM Module](https://scikit-learn.org/stable/modules/svm.html)
 
 ## ⚖️ License
 This project is licensed under the MIT License - see the LICENSE file for details.
