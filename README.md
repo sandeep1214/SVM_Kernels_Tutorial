@@ -72,7 +72,10 @@ SVC(kernel='poly', degree=3, C=1.0)
 - Handles complex non-linear patterns
 ```python
 SVC(kernel='rbf', C=1.0, gamma=0.5)
+
 ```
+
+---
 ## 📈 Visualizations
 
 ### ✅ Decision Boundaries
@@ -84,6 +87,9 @@ Each kernel is visualized using a 2D plot showing:
 ### ✅ 3D Visualization (RBF)
 - Displays the decision function surface
 - Helps understand how non-linear separation works in higher dimensions
+
+  ---
+
   
 ## 🧪 Key Concepts
 
@@ -95,9 +101,11 @@ Instead of explicitly transforming data, SVM computes inner products in higher-d
 - Polynomial kernel → moderate complexity
 - RBF kernel → highly flexible
 
-Choosing the wrong kernel can lead to:
+**Choosing the wrong kernel can lead to:**
 - Underfitting
 - Overfitting
+
+  ---
   
 ## 📊 Results Summary
 | Kernel     | Behavior                        | Use Case                    |
@@ -106,11 +114,15 @@ Choosing the wrong kernel can lead to:
 | Polynomial | Smooth curved boundary          | Moderate non-linearity      |
 | RBF        | Highly flexible, complex shapes | Complex/non-linear patterns |
 
+---
+
 ## 💡 Intuition
 
 A key insight:
 - Non-linear boundaries in 2D often become linear in higher dimensions.
 - The RBF kernel effectively transforms the data so that a linear separator can exist in that higher-dimensional space.
+
+  ---
 
 ## 🧾 Conclusion
 - Kernel selection is critical in SVM performance
@@ -118,15 +130,21 @@ A key insight:
 - Polynomial adds controlled complexity
 - RBF is powerful but sensitive to parameters
 
+  ---
+
 ### 👉 Always experiment with:
 - C (regularization)
 - degree (polynomial)
 - gamma (RBF)
+
+ ---
   
 ## 📎 References
 - Boser, Guyon, Vapnik (1992) – Optimal margin classifiers
 - Cortes & Vapnik (1995) – Support Vector Networks
 - Scikit-learn Documentation - https://scikit-learn.org/stable/modules/svm.html
+
+  ---
 
 ## 🔗 Repository
 https://github.com/sandeep1214/SVM_Kernels_Tutorial
