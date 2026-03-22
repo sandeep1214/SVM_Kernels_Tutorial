@@ -84,7 +84,7 @@ Each kernel is visualized using a 2D plot showing:
 ### ✅ 3D Visualization (RBF)
 - Displays the decision function surface
 - Helps understand how non-linear separation works in higher dimensions
-- 
+  
 ## 🧪 Key Concepts
 
 ### 🔹 Kernel Trick
@@ -98,7 +98,7 @@ Instead of explicitly transforming data, SVM computes inner products in higher-d
 Choosing the wrong kernel can lead to:
 - Underfitting
 - Overfitting
-- 
+  
 ## 📊 Results Summary
 | Kernel     | Behavior                        | Use Case                    |
 | ---------- | ------------------------------- | --------------------------- |
@@ -124,9 +124,9 @@ A key insight:
 - gamma (RBF)
   
 ## 📎 References
-Boser, Guyon, Vapnik (1992) – Optimal margin classifiers
-Cortes & Vapnik (1995) – Support Vector Networks
-Scikit-learn Documentation
+- Boser, Guyon, Vapnik (1992) – Optimal margin classifiers
+- Cortes & Vapnik (1995) – Support Vector Networks
+- Scikit-learn Documentation - https://scikit-learn.org/stable/modules/svm.html
 
 ## 🔗 Repository
 https://github.com/sandeep1214/SVM_Kernels_Tutorial
