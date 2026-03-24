@@ -1,94 +1,48 @@
-# 📊 SVM Kernels Tutorial – Understanding Decision Boundaries
+# 📊 SVM Kernels: Geometric Intuition & Performance Analysis
 
-## 📌 Overview
-This project explores **Support Vector Machines (SVMs)** and demonstrates how different kernel functions affect decision boundaries.
+This repository contains a comprehensive tutorial on **Support Vector Machines (SVM)**, focusing on the "Kernel Trick" to solve both linear and complex non-linear classification problems.
 
-Using the **Iris dataset**, we visualize how:
-- Linear kernels create straight decision boundaries  
-- Polynomial kernels introduce curvature  
-- RBF kernels model complex, non-linear relationships  
+## 🚀 Overview
+At Level 7 (Master's) data science, understanding SVMs requires moving beyond "how to code" into "how they work." This project demonstrates:
+- **Maximum Margin Theory:** The goal of finding the optimal hyperplane.
+- **Kernel Comparison:** Direct analysis of Linear, Polynomial, and RBF kernels.
+- **Stress Testing:** Moving from the simple Iris dataset to the geometrically entangled Moons dataset.
 
-The goal is to build intuition around the **kernel trick** and how SVMs handle non-linear data.
+## 📂 Project Structure
+- `SVM_Kernels_Tutorial.ipynb`: The complete technical tutorial with visualizations.
+- `requirements.txt`: Necessary libraries (Scikit-Learn, Matplotlib, NumPy).
+- `images/`: Exported decision boundary plots.
 
----
+## 🧠 Key Technical Concepts Implemented
 
-## 🧠 Objectives
-- Understand how SVM works for classification  
-- Compare different kernel functions:
-  - Linear
-  - Polynomial
-  - RBF (Gaussian)  
-- Visualize decision boundaries in 2D  
-- Explore how kernel choice impacts model performance  
+### 1. The Kernel Trick & Hyperparameters
+We explore the mathematical "knobs" that control model behavior:
+* **$C$ (Regularization):** Balancing the trade-off between a wide margin and misclassification.
+* **$\gamma$ (Gamma):** Defining the "reach" of a single training point in the RBF kernel.
 
----
+### 2. Dataset Strategy
+- **Baseline (Iris Dataset):** Focused on Petal Length vs. Width to demonstrate near-linear separability.
+- **The "Challenge Case" (Moons Dataset):** A non-linear synthetic dataset used to prove that a Linear kernel fails where an RBF kernel succeeds.
 
-## 📂 Dataset
-We use the **Iris dataset** with the following setup:
-- Features:  
-  - Petal Length  
-  - Petal Width  
-- Classes:
-  - Setosa  
-  - Versicolor  
-- Total samples used: **100 (binary classification)**  
+### 3. Quantitative Evaluation
+Unlike basic tutorials, this project includes a formal performance comparison:
 
----
+| Kernel | Complexity | Iris Accuracy | Observation |
+| :--- | :--- | :--- | :--- |
+| **Linear** | Low | ~95-100% | Efficient for separable data. |
+| **Polynomial** | Medium | ~95-100% | Flexible curvature. |
+| **RBF** | High | 100% | Handles non-linear "Moons" data perfectly. |
 
-## ⚙️ Technologies Used
-- Python  
-- NumPy  
-- Matplotlib  
-- Scikit-learn  
-
----
-
-## 🚀 Project Workflow
-
-### 1. Data Preparation
-- Load dataset from `sklearn.datasets`
-- Filter to 2 classes for visualization
-- Split into train/test sets
-- Standardize features using `StandardScaler`
-
----
-
-### 2. Models Implemented
-
-#### 🔹 Linear Kernel
-- Creates a **straight-line decision boundary**
-- Works best for **linearly separable data**
-```python
-SVC(kernel='linear', C=1.0)
-```
-#### 🔹Polynomial Kernel
-- Produces curved decision boundaries
-- Controlled by degree parameter  
-```python
-SVC(kernel='poly', degree=3, C=1.0)
-```
-#### 🔹 RBF (Gaussian) Kernel
-- Maps data into higher-dimensional space
-- Handles complex non-linear patterns
-```python
-SVC(kernel='rbf', C=1.0, gamma=0.5)
-
-```
-
----
 ## 📈 Visualizations
+The tutorial features:
+* **2D Decision Boundaries:** Visualizing the separation of classes.
+* **3D Decision Surfaces:** Illustrating how the RBF kernel "lifts" data into higher dimensions to find a linear separator.
+* **Comparison Plots:** Side-by-side failure/success analysis on non-linear data.
 
-### ✅ Decision Boundaries
-Each kernel is visualized using a 2D plot showing:
-- Data points
-- Classification regions
-- Decision boundary
-  
-### ✅ 3D Visualization (RBF)
-- Displays the decision function surface
-- Helps understand how non-linear separation works in higher dimensions
-
-  ---
+## 🛠️ Installation & Usage
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/sandeep1214/SVM_Kernels_Tutorial.git](https://github.com/sandeep1214/SVM_Kernels_Tutorial.git)
 
   
 ## 🧪 Key Concepts
